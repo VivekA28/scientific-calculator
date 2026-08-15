@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Web Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="calculator-card">
+        <div class="title-bar">
+            <span class="title">Scientific Calculator</span>
+            <span class="badge">Web • JS</span>
+        </div>
+
+        <div id="display" class="display">0</div>
+
+        <div id="history" class="history"></div>
+
+        <div class="buttons">
+
+            <!-- Row 1 -->
+            <button class="btn utility" onclick="clearAll()">AC</button>
+            <button class="btn utility" onclick="backspace()">DEL</button>
+            <button class="btn utility" onclick="pressToken('(', '(')">(</button>
+            <button class="btn utility" onclick="pressToken(')', ')')">)</button>
+
+            <!-- Row 2 -->
+            <button class="btn func" onclick="pressFunction('sin')">sin</button>
+            <button class="btn func" onclick="pressFunction('cos')">cos</button>
+            <button class="btn func" onclick="pressFunction('tan')">tan</button>
+            <button class="btn op" onclick="pressToken(' ÷ ', '/')">÷</button>
+
+            <!-- Row 3 -->
+            <button class="btn func" onclick="pressFunction('log')">log</button>
+            <button class="btn func" onclick="pressFunction('ln')">ln</button>
+            <button class="btn func" onclick="pressFunction('sqrt')">√</button>
+            <button class="btn op" onclick="pressToken(' × ', '*')">×</button>
+
+            <!-- Row 4 -->
+            <button class="btn func" onclick="pressFunction('square')">x²</button>
+            <button class="btn func" onclick="pressFunction('cube')">x³</button>
+            <button class="btn func" onclick="pressFunction('inv')">1/x</button>
+            <button class="btn op" onclick="pressToken(' − ', '-')">−</button>
+
+            <!-- Row 5 -->
+            <button class="btn func" onclick="pressFunction('pi')">π</button>
+            <button class="btn func" onclick="pressFunction('e')">e</button>
+            <button class="btn func" onclick="pressFunction('percent')">%</button>
+            <button class="btn op" onclick="pressToken(' + ', '+')">+</button>
+
+            <!-- Row 6 -->
+            <button class="btn num" onclick="pressToken('7','7')">7</button>
+            <button class="btn num" onclick="pressToken('8','8')">8</button>
+            <button class="btn num" onclick="pressToken('9','9')">9</button>
+            <button class="btn equal" onclick="calculate()">=</button>
+
+            <!-- Row 7 -->
+            <button class="btn num" onclick="pressToken('4','4')">4</button>
+            <button class="btn num" onclick="pressToken('5','5')">5</button>
+            <button class="btn num" onclick="pressToken('6','6')">6</button>
+            <button class="btn decimal" onclick="pressToken('.','.')">.</button>
+
+            <!-- Row 8 -->
+            <button class="btn num" onclick="pressToken('1','1')">1</button>
+            <button class="btn num" onclick="pressToken('2','2')">2</button>
+            <button class="btn num" onclick="pressToken('3','3')">3</button>
+            <button class="btn num zero" onclick="pressToken('0','0')">0</button>
+
+        </div>
+
+        <div class="footer-note">Keyboard supported: numbers, + − × ÷, Enter, Backspace, Esc</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
